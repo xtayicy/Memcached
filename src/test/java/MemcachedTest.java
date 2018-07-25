@@ -11,7 +11,7 @@ import com.whalin.MemCached.SockIOPool;
 public class MemcachedTest {
 	MemCachedClient memCachedClient = new MemCachedClient();
 	
-	static{
+	public void before(){
 		SockIOPool pool = SockIOPool.getInstance();
 		pool.setServers(new String[]{"localhost:11211"});
 		pool.initialize();

@@ -5,24 +5,50 @@
 	<artifactId>memcachedDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<com.whalin.version>3.0.2</com.whalin.version>
+		<org.slf4j.version>1.6.4</org.slf4j.version>
+		<junit.version>4.12</junit.version>
+	</properties>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.whalin/Memcached-Java-Client -->
 		<dependency>
 			<groupId>com.whalin</groupId>
 			<artifactId>Memcached-Java-Client</artifactId>
-			<version>3.0.2</version>
+			<version>${com.whalin.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
-      		<artifactId>slf4j-log4j12</artifactId>
-      		<version>1.6.4</version>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

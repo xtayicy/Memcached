@@ -8,6 +8,8 @@
 	<properties>
 		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
 		<com.whalin.version>3.0.2</com.whalin.version>
 		<org.slf4j.version>1.6.4</org.slf4j.version>
 		<junit.version>4.12</junit.version>
@@ -34,7 +36,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	
 	<build>
 		<pluginManagement>
 			<plugins>

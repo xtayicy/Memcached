@@ -1,3 +1,4 @@
+package harry.memcached;
 import org.junit.Test;
 
 import com.whalin.MemCached.MemCachedClient;
